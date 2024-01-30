@@ -195,6 +195,9 @@ a {
     padding: 15px;
   }
 }
+.block__body-p .block__form {
+  margin-top: 30px;
+}
 .block__btns {
   display: flex;
   align-items: center;
@@ -268,6 +271,12 @@ a {
   top: 50%;
   transform: translateY(-50%);
   margin: auto;
+}
+@media (max-width: 400px) {
+  .modal .block__btns {
+    flex-direction: column-reverse;
+    margin-top: 30px;
+  }
 }
 
 .item {
