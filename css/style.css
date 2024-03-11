@@ -29,7 +29,6 @@ body {
   font-weight: 500;
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
-  background-position: 0 -150px;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -93,9 +92,14 @@ a {
   line-height: normal;
   letter-spacing: 0.18px;
 }
-@media (max-width: 360px) {
+@media (max-width: 500px) {
   .text {
     font-size: 16px;
+  }
+}
+@media (max-width: 360px) {
+  .text {
+    font-size: 14px;
   }
 }
 
@@ -115,9 +119,14 @@ a {
 .fs-25 {
   font-size: 25px;
 }
+@media (max-width: 425px) {
+  .fs-25 {
+    font-size: 20px;
+  }
+}
 @media (max-width: 350px) {
   .fs-25 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
@@ -138,14 +147,17 @@ a {
   border: 2px solid transparent;
   border-radius: 5px;
   outline: none;
-  transition: background 5s, border 0.3s;
+  transition: background 5s, border 0.3s, transform 0.15s;
   cursor: pointer;
 }
 .btn-primary {
   background: var(--primary);
 }
-.btn-primary:hover {
-  background: var(--btn-primary-hover);
+@media (hover: hover) {
+  .btn-primary:hover {
+    background: var(--btn-primary-hover);
+    transform: translateY(-2px);
+  }
 }
 .btn-primary:active {
   background: var(--btn-primary-active);
@@ -207,7 +219,16 @@ a {
 }
 @media (max-width: 380px) {
   .block__btns {
+    max-width: 150px;
     flex-direction: column;
+    margin: 0 auto;
+  }
+  .block__btns .btn {
+    width: 100%;
+  }
+  .block__btns .btn:nth-child(1), .block__btns .btn:nth-child(3) {
+    background: transparent;
+    border: 2px solid var(--primary);
   }
 }
 .block__form {
